@@ -13,6 +13,13 @@ Complete FST をベースに、ローマ字 <-> ひらがな変換はも�
 
 
 
+デモ
+----
+
+[ローマ字カタカナ変換のデモサイト](http://takuyaa.github.io/complete-fst/demo/complete-romaji.html)を公開しています。
+
+
+
 内容物
 ------
 
