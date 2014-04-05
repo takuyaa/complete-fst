@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/foundation.min.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="small-12 columns">
+
+        <div class="row">
+          <div class="small-12 columns">
+            <h1>complete-romaji.js</h1>
+            <h4 class="subheader">ローマ字カタカナ変換ライブラリ complete-romaji.js
+のデモ</h4>
+            <p>すべての変換候補を出力する非決定性 FST (Finite State Transducer) の実装、Complete FST をベースに作られています。</p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+          <div class="small-12 medium-6 columns">
+            <div class="row">
+              <div class="small-12 columns">
+                <h4>Romanization systems <small>変換方式</small></h4>
+                <input id="type-iso" class="type-checkbox" type="checkbox" checked="">
+                <label for="type-iso"><a href="http://xembho.s59.xrea.com/siryoo/iso3602_bassui.html">ISO3602 訓令式</a></label><br />
+                <input id="type-iso-strict" class="type-checkbox" type="checkbox">
+                <label for="type-iso-strict"><a href="http://xembho.s59.xrea.com/siryoo/iso3602_bassui.html">ISO3602 日本式 (厳密翻字)</a></label><br />
+                <input id="type-kunrei" class="type-checkbox" type="checkbox">
+                <label for="type-kunrei"><a href="http://xembho.s59.xrea.com/siryoo/naikaku_kokuzi.html">内閣告示 訓令式 (第1表のみ)</a></label><br />
+                <input id="type-kunrei-2" class="type-checkbox" type="checkbox">
+                <label for="type-kunrei-2"><a href="http://xembho.s59.xrea.com/siryoo/naikaku_kokuzi.html">内閣告示 訓令式 (第2表を含む)</a></label><br />
+                <input id="type-hepburn-bs" class="type-checkbox" type="checkbox">
+                <label for="type-hepburn-bs"><a href="http://halcat.com/roomazi/doc/bs4812.html">BS 4812 : 1972 ヘボン式</a></label><br />
+                <input id="type-passport" class="type-checkbox" type="checkbox">
+                <label for="type-passport"><a href="http://www.hyogo-passport.jp/modules/ryoken/index.php/main/hebon.html">外務省 ヘボン式 (パスポート式)</a></label><br />
+              </div>
+            </div>
+          </div>
+          <div class="small-12 medium-6 columns">
+            <div class="row">
+              <div class="small-12 columns">
+                <h4>Romaji input <small>ローマ字を入力</small></h4>
+                <input id="input-form" type="text" placeholder="Input Romaji">
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 columns">
+                <h4>Katakana results <small>カタカナ</small></h4>
+                <div>
+                  <ul class="no-bullet" id="results">
+                    <li>No results <small>結果がありません</small></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="./js/vendor/jquery-2.1.0.min.js" type="text/javascript"></script>
+      <script src="../complete-fst.js" type="text/javascript"></script>
+      <script src="../complete-romaji.js" type="text/javascript"></script>
+      <script src="./js/complete-romaji.js" type="text/javascript"></script>
+  </body>
+</html>
