@@ -51,6 +51,9 @@ describe('Romaji2Katakana', function () {
         });
         it('ヘボン式のローマ字', function () {
 	        expect(converter.convert('shi')).to.include('シ');
+        });
+        it('ヘボン式のローマ字で長音を含むもの', function () {
+	        expect(converter.convert('toru')).to.include('トオル');
 	        expect(converter.convert('shoko')).to.include('ショウコ');
 	        expect(converter.convert('ichiro')).to.include('イチロウ');
         });
