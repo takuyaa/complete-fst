@@ -18,13 +18,13 @@ describe('Romaji2Katakana', function () {
 	        expect(converter.convert('kanda').length).to.eql(1);
         });
         it('ndが含まれるローマ字で正しいカタカナを返す', function () {
-	        expect(converter.convert('kanda')).to.include('カンダ');
+	        expect(converter.convert('kanda')).to.include('カン\u30C0');
         });
         it('junが含まれるローマ字で正しいカタカナを返す', function () {
-	        expect(converter.convert('jun')).to.include('ジュン');
+	        expect(converter.convert('jun')).to.include('\u30B8ュン');
         });
         it('beが含まれるローマ字で正しいカタカナを返す', function () {
-	        expect(converter.convert('kabe')).to.include('カベ');
+	        expect(converter.convert('kabe')).to.include('カ\u30D9');
         });
         it('nの次に母音があるローマ字で正しいカタカナを返す', function () {
 	        expect(converter.convert('asano')).to.include('アサノ');
@@ -38,7 +38,7 @@ describe('Romaji2Katakana', function () {
 	        expect(converter.convert('zi').length).to.be.at.least(2);
         });
         it('dyaが含まれるローマ字', function () {
-	        expect(converter.convert('dya')).to.include('ヂャ');
+	        expect(converter.convert('dya')).to.include('\u30C2ャ');
         });
         it('パスポート式の長音', function () {
 	        expect(converter.convert('sho')).to.include('ショウ');
@@ -55,10 +55,10 @@ describe('Romaji2Katakana', function () {
 	        expect(converter.convert('ichiro')).to.include('イチロウ');
         });
         it('ヘボン式のmをンに変換する', function () {
-	        expect(converter.convert('hombo')).to.include('ホンボ');
+	        expect(converter.convert('hombo')).to.include('ホン\u30DC');
         });
         it('訓令式・日本式・ヘボン式の組み合わせのローマ字', function () {
-	        expect(converter.convert('shizidya')).to.include('シヂヂャ');
+	        expect(converter.convert('shizidya')).to.include('シ\u30C2\u30C2ャ');
         });
     });
 });
